@@ -20,4 +20,14 @@
         releaseDate: "2017-010-13T22:12:20.000ZUTC",
         createdAt: "s2016-05-13T22:12:20.000ZUTC",
         updatedAt: "2016-008-13T22:12:20.000ZUTC",
+
+        id2: "330571-002",
+        title2: "Battle Field",
+        description2: "An app designed to gather up all of the fellow trainer's in one area to defend their levels.",
+        releaseDate2: "2018-03-05T22:9:20.000ZUTC",
+        createdAt2: "2016-01-05T22:9:20.000ZUTC",
+        updatedAt2: "2016-12-05T22:9:20.000ZUTC",
+
+
+
   };
