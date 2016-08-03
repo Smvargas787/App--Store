@@ -10,7 +10,7 @@ var app = express();
 // Sets up project port
 var port = 3000;
 
-// URL Schema
+// URL Scheme
 app.use('/api/v1', require('../routes/api.js')(express));
 
 // Starts Server
