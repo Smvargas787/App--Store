@@ -83,16 +83,14 @@
     //----------------------- Solo User ---------------------//
 
     router.get('/users/:id', function(req,res){
-      res.json({
-        user2: {
-        id: "004",
-        name: "Charmander",
-        Type: "Fire",
-    },
-  });
-});
-      });
+        res.json({
+          user2: {
+          id: "004",
+          name: "Charmander",
+          Type: "Fire",
+          }
         });
+      });
 
-        return router;
-  };
+    return router;
+    };
