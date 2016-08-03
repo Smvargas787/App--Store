@@ -11,9 +11,7 @@
     });
 
     //----------------------- All Apps ---------------------//
-    router.get('/users', function(req,res){
 
-    //All Apps Info
     router.get('/apps', function(req,res){
       res.json({
         id: "32818-001",
