@@ -35,6 +35,9 @@
         createdAt3: "2018-08-05T22:12:00.000ZUTC",
         updatedAt3: "2018-08-05T22:12:00.000ZUTC",
 
+      });
+  });
+
         //----------------------- All Users ---------------------//
 
       router.get('/users', function(req,res){
@@ -51,11 +54,15 @@
         Type: "Fire",
       },
 
-      user3: {
-      id: "007",
-      name: "Squirtle",
-      Type: "Water",
-    },
+        user3: {
+        id: "007",
+        name: "Squirtle",
+        Type: "Water",
+      },
+
+      });
+    });
+
 
     //----------------------- Solo App ---------------------//
 
@@ -76,24 +83,14 @@
     //----------------------- Solo User ---------------------//
 
     router.get('/users/:id', function(req,res){
-    res.json({
-      user2: {
-      id: "004",
-      name: "Charmander",
-      Type: "Fire",
+      res.json({
+        user2: {
+        id: "004",
+        name: "Charmander",
+        Type: "Fire",
     },
   });
 });
-
-
-
-
-
-
-
-
-
-
       });
         });
 
