@@ -51,6 +51,11 @@
         Type: "Fire",
       },
 
+      user3: {
+      id: "007",
+      name: "Squirtle",
+      Type: "Water",
+    },
 
       });
         });
