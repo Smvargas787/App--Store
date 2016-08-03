@@ -38,23 +38,26 @@
         //----------------------- All Users ---------------------//
 
       router.get('/users', function(req,res){
-        res.json({
+        res.json([
 
-        user: {
+        {
+        user: "g",
         id: "025",
         name: "Pikachu",
         },
-        user: {
+
+      {
+        user: "l",
         id: "004",
         name: "Charmander",
       },
 
-        user: {
+        {
+        user: "ll",
         id: "007",
         name: "Squirtle",
-      },
-
-      });
+      }
+    ]);
     });
 
 
