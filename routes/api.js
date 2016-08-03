@@ -45,6 +45,13 @@
           Type: "Electric",
         },
 
+        user2: {
+        id: "004",
+        name: "Charmander",
+        Type: "Fire",
+      },
+
+
       });
         });
 
