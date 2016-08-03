@@ -30,10 +30,20 @@
 
         id3: "63131-003",
         title3: "Pokedex",
-        description3: "An app create to list all of the available Pokemon and their information"
-        releaseDate3: "2003-03-05T22:9:20.000ZUTC",
-        createdAt3: "2001-10-05T22:9:20.000ZUTC",
-        updatedAt3: "2001-07-05T22:9:20.000ZUTC",
+        description3: "An app created to share and engage with others of comic book characters.",
+        releaseDate3: "2018-08-05T22:12:00.000ZUTC",
+        createdAt3: "2018-08-05T22:12:00.000ZUTC",
+        updatedAt3: "2018-08-05T22:12:00.000ZUTC",
+
+        //----------------------- All Users ---------------------//
+
+      router.get('/users', function(req,res){
+        res.json({
+          user: {
+          id: "025",
+          name: "Pikachu",
+          Type: "Electric",
+        },
 
       });
         });
