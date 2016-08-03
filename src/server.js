@@ -1,16 +1,8 @@
-// Requires The Express Module
-
+// Links up to Dependencies
 var express = require('express');
 
+// Links up to Dependencies
+var body_parse = require('body-parser');
 
+// Web Sever
 var app = express();
-
-var port = 3000;
-
-app.get('/', function(req,res){
-  res.json({healthy: true});
-});
-
-app.listen(port, function(){
-    console.log('Our server is Running on', port);
-  });
