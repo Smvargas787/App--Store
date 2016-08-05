@@ -40,6 +40,7 @@ npm test
 | --- | --- |
 | GET /api/v1/apps/:id  | ```{"id":"63131-003","title":"Pokedex","description":"An app created to share and engage with others of comic book characters.","releaseDate":"2018-08-05T22:12:00.000ZUTC"}```
 
+
 | Route Hit | Response |
 | --- | --- |
 | GET /api/v1/users/:id  | ```{"id":"004","name":"Charmander","type":"Fire"}```

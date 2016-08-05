@@ -1,7 +1,5 @@
 // Links up to Dependencies
 const express = require('express');
-
-// Links up to Dependencies
 const bodyParser = require('body-parser');
 
 // Web Sever
