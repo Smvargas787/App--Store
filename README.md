@@ -13,7 +13,7 @@ npm i mocha -g
 
 To run the server with default settings run
 ```
-npm Start
+npm start
 ```
 ##Run Unit tests
 
