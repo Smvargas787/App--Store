@@ -31,12 +31,12 @@ npm test
 
 | Route Hit | Response |
 | --- | --- |
-| GET /api/v1/users  | ```[{"user":{"id":"025","name":"Pikachu","type":"Electric"}}{"user":{"id":"004","name":"Charmander","type":"Fire"}}{"user":{"id":"007","name":"Squirtle","type":"Water"}}]```
+| GET /api/v1/users  | ```[{"user":{"id":"025","name":"Pikachu","type":"Electric"}} {"user":{"id":"004","name":"Charmander","type":"Fire"}}{"user": {"id":"007","name":"Squirtle","type":"Water"}}]```
 
 
 | Route Hit | Response |
 | --- | --- |
-| GET /api/v1/apps/:id  | ```{"id":"63131-003","title":"Pokedex","description":"An app created to share and engage with others of comic book characters.","releaseDate":"2018-08-05T22:12:00.000ZUTC"}``` 
+| GET /api/v1/apps/:id  | ```{"id":"63131-003","title":"Pokedex","description":"An app created to share and engage with others of comic book characters.","releaseDate":"2018-08-05T22:12:00.000ZUTC"}```
 
 | Route Hit | Response |
 | --- | --- |
