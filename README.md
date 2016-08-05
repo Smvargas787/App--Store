@@ -3,27 +3,23 @@
 Install all Dependencies
 ```
 npm install
-
 ```
 
 Install command line tools
 ```
 npm i mocha -g
-
 ```
 ##Start The Server
 
 To run the server with default settings run
 ```
 npm Start
-
 ```
 ##Run Unit tests
 
 To run the unit test
 ```
 npm test
-
 ```
 
 ##Routes
