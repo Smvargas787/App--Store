@@ -24,7 +24,7 @@ npm test
 
 ##Routes
 
-**GET /api/v1/apps**
+**_GET /api/v1/apps_**
 
 - [{"id":"32818-001",
 "title":"Trainer's Gym",
@@ -36,7 +36,7 @@ npm test
 "description":"An app designed to gather trainer's in one area to defend their levels.",
 "releaseDate":"2018-03-05T22:9:20.000ZUTC"}
 
-**GET /api/v1/users**
+**_GET /api/v1/users_**
 
 - [{"user":
 {"id":"025",
@@ -53,14 +53,14 @@ npm test
 "name":"Squirtle",
 "type":"Water"}}] |
 
-**GET /api/v1/apps/:id**
+**_GET /api/v1/apps/:id_**
 
 - {"id":"63131-003",
 "title":"Pokedex",
 "description":"An app created to share and engage with others of comic book characters.",
 "releaseDate":"2018-08-05T22:12:00.000ZUTC"} |
 
-**GET /api/v1/users/:id**
+**_GET /api/v1/users/:id_**
 
 - {"id":"004",
 "name":"Charmander",
