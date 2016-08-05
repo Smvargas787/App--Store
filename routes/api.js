@@ -41,22 +41,28 @@
         res.json([
 
         {
-        user: "g",
+        user:{
         id: "025",
         name: "Pikachu",
+        type: "Electric",
+      }
         },
 
       {
-        user: "l",
+        user:{
         id: "004",
         name: "Charmander",
-      },
+        type: "Fire",
+      }
+        },
 
         {
-        user: "ll",
+        user:{
         id: "007",
         name: "Squirtle",
+        type: "Water"
       }
+        }
     ]);
     });
 
