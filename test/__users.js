@@ -31,7 +31,7 @@ describe('User Routes', () => {
   });
 
   // Test for a single user
-  it('GET /api/v1/users/:id returns an user obj with a id and name property', (done) => {
+  it('GET /api/v1/users/:id returns an user obj with a id, name property, and type', (done) => {
     request(server)
       .get(`/api/v1/users/${this.user.id}`)
       .set('Accept', 'application/json')

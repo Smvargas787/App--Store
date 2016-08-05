@@ -24,7 +24,7 @@
         {
           id: '330571-002',
           title: 'Battle Field',
-          description: "An app designed to gather up all of the fellow trainer's in one area to defend their levels.",
+          description: "An app designed to gather trainer's in one area to defend their levels.",
           releaseDate: '2018-03-05T22:9:20.000ZUTC',
         },
         {
@@ -85,10 +85,9 @@
 
     router.get('/users/:id', (req, res) => {
       res.json({
-        user: {
-          id: '004',
-          name: 'Charmander',
-        },
+        id: '004',
+        name: 'Charmander',
+        type: 'Fire',
       });
     });
 
