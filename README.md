@@ -24,12 +24,23 @@ npm test
 
 ##Routes
 
-**_GET /api/v1/apps_**
+| GET /api/v1/apps |
 
-- [{"id":"32818-001",
+```
+[{"id":"32818-001",
+"title":"Trainer's Gym",
+"description":"An API that can be used to operate inside of a Pokemon gym for users.",
+"releaseDate":"2017-010-13T22:12:20.000ZUTC"}  |
+```
+
+| **_GET /api/v1/apps_** |
+
+```
+[{"id":"32818-001",
 "title":"Trainer's Gym",
 "description":"An API that can be used to operate inside of a Pokemon gym for users.",
 "releaseDate":"2017-010-13T22:12:20.000ZUTC"}
+```
 
 - {"id":"330571-002",
 "title":"Battle Field",
