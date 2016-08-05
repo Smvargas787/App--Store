@@ -1,96 +1,96 @@
 // Server.js Needs This File to Access
-  module.exports = function(express){
-    var router = express.Router();
+  module.exports = (express) => {
+    const router = express.Router();
 
-    router.get('/',function(req,res){
-      res.json({wassup: 'humans'});
+    router.get('/', (req, res) => {
+      res.json({ wassup: 'humans' });
     });
 
-    router.get('/status', function(req,res){
-      res.json({healthy: true});
+    router.get('/status', (req, res) => {
+      res.json({ healthy: true });
     });
 
-    //----------------------- All Apps ---------------------//
+    // ------------------------- All Apps ----------------------------//
 
-    router.get('/apps', function(req,res){
+
+    router.get('/apps', (req, res) => {
       res.json([
         {
-        id: "32818-001",
-        title: "Trainer's Gym",
-        description: "An API that can be used to operate inside of a Pokemon gym for users.",
-        releaseDate: "2017-010-13T22:12:20.000ZUTC",
-      },
+          id: '32818-001',
+          title: "Trainer's Gym",
+          description: 'An API that can be used to operate inside of a Pokemon gym for users.',
+          releaseDate: '2017-010-13T22:12:20.000ZUTC',
+        },
         {
-        id: "330571-002",
-        title: "Battle Field",
-        description: "An app designed to gather up all of the fellow trainer's in one area to defend their levels.",
-        releaseDate: "2018-03-05T22:9:20.000ZUTC",
-      },
-      {
-        id: "63131-003",
-        title: "Pokedex",
-        description: "An app created to share and engage with others of comic book characters.",
-        releaseDate: "2018-08-05T22:12:00.000ZUTC",
-      }
+          id: '330571-002',
+          title: 'Battle Field',
+          description: "An app designed to gather up all of the fellow trainer's in one area to defend their levels.",
+          releaseDate: '2018-03-05T22:9:20.000ZUTC',
+        },
+        {
+          id: '63131-003',
+          title: 'Pokedex',
+          description: 'An app created to share and engage with others of comic book characters.',
+          releaseDate: '2018-08-05T22:12:00.000ZUTC',
+        },
       ]);
-  });
+    });
 
-        //----------------------- All Users ---------------------//
+        // ----------------------- All Users ---------------------//
 
-      router.get('/users', function(req,res){
-        res.json([
+    router.get('/users', (req, res) => {
+      res.json([
 
         {
-        user:{
-        id: "025",
-        name: "Pikachu",
-        type: "Electric",
-      }
-        },
-
-      {
-        user:{
-        id: "004",
-        name: "Charmander",
-        type: "Fire",
-      }
+          user: {
+            id: '025',
+            name: 'Pikachu',
+            type: 'Electric',
+          },
         },
 
         {
-        user:{
-        id: "007",
-        name: "Squirtle",
-        type: "Water"
-      }
-        }
-    ]);
+          user: {
+            id: '004',
+            name: 'Charmander',
+            type: 'Fire',
+          },
+        },
+
+        {
+          user: {
+            id: '007',
+            name: 'Squirtle',
+            type: 'Water',
+          },
+        },
+      ]);
     });
 
 
-    //----------------------- Solo App ---------------------//
+    // ----------------------- Solo App ---------------------//
 
-    router.get('/apps/:id', function(req,res){
+    router.get('/apps/:id', (req, res) => {
       res.json({
-        id: "63131-003",
-        title: "Pokedex",
-        description: "An app created to share and engage with others of comic book characters.",
-        releaseDate: "2018-08-05T22:12:00.000ZUTC",
+        id: '63131-003',
+        title: 'Pokedex',
+        description: 'An app created to share and engage with others of comic book characters.',
+        releaseDate: '2018-08-05T22:12:00.000ZUTC',
 
-  });
-
+      });
     });
 
 
-    //----------------------- Solo User ---------------------//
+    // ----------------------- Solo User ---------------------//
 
-    router.get('/users/:id', function(req,res){
-        res.json({
-          user2: {
-          id: "004",
-          name: "Charmander",
-          }
-        });
+    router.get('/users/:id', (req, res) => {
+      res.json({
+        user: {
+          id: '004',
+          name: 'Charmander',
+        },
       });
+    });
 
     return router;
-    };
+  };
