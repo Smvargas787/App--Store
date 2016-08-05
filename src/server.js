@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Body Parser Grabs POST Data
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
@@ -15,7 +16,7 @@ app.use(bodyParser.json());
 const port = 3000;
 
 // URL Scheme
-app.use('/api/v1', require('../routes/api.js')(express));
+app.use('/api/v1', require('../routes/api')(express));
 
 // Starts Server
 const server = app.listen(port, () => {
