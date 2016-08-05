@@ -26,7 +26,7 @@ npm test
 
 | Route Hit | Response |
 | --- | --- |
-| GET /api/v1/apps  | ```"id":"330571-002","title":"Battle Field","description":"An app designed to gather trainer's in one area to defend their levels.","releaseDate":"2018-03-05T22:9:20.000ZUTC"} "id":"330571-002","title":"Battle Field","description":"An app designed to gather trainer's in one area to defend their levels.","releaseDate":"2018-03-05T22:9:20.000ZUTC"} [{"id":"32818-001","title":"Trainer's Gym","description":"An API that can be used to operate inside of a Pokemon gym for users.","releaseDate":"2017-010-13T22:12:20.000ZUTC"}```
+| GET /api/v1/apps  | ```"id":"330571-002","title":"Battle Field","description":"An app designed to gather trainer's in one area to defend their levels.","releaseDate":"2018-03-05T22:9:20.000ZUTC"}[{"id":"32818-001","title":"Trainer's Gym","description":"An API that can be used to operate inside of a Pokemon gym for users.","releaseDate":"2017-010-13T22:12:20.000ZUTC"}```
 
 
 | Route Hit | Response |
