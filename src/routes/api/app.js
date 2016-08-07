@@ -5,7 +5,7 @@ module.exports = (express) => {
 
   // ------------------------- All Apps ----------------------------//
 
-// Read Apps (.all)
+// Read All (.all)
 
   router.get('/apps', (req, res) => {
     app.findAll((err) => {
@@ -15,7 +15,7 @@ module.exports = (express) => {
     });
   });
 
-// Create One App (.add)
+// Create One (.add)
 
   router.post('/apps', (req, res) => {
     app.create(req.body, (err) => {
@@ -36,7 +36,7 @@ module.exports = (express) => {
     });
   });
 
-// Update One App (.update)
+// Update One (.update)
 
   router.post('/apps/:id', (req, res) => {
     req.body.id = req.params.id;
@@ -47,7 +47,7 @@ module.exports = (express) => {
     });
   });
 
-// Delete One App (.remove)
+// Delete One (.remove)
 
   router.delete('/apps/:id', (req, res) => {
     req.body.id = req.params.id;
