@@ -19,7 +19,7 @@ exports.add = (payload, err, success) => {
 // Read One (.one)
 
 exports.one = (payload, err, success) => {
-  db.app.one({
+  db.app.find({
     where: {
       id: payload.id,
     },
@@ -29,4 +29,16 @@ exports.one = (payload, err, success) => {
       nested: true,
     }],
   }).then(success).catch(err);
+};
+
+// Update One (.update)
+
+exports.update = (payload, err, success) => {
+  db.app.find({
+    where: {
+      id: payload.id,
+    },
+  }).then((existingData) => {
+    existingData.updateAttributes(payload).then(success).catch(err);
+  }).catch(err);
 };
