@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 
 // URL Scheme
-app.use('/api/v1', require('./routes/api')(express));
+app.use('/', require('./routes')(express));
 
 // Starts Server
 const server = app.listen(port, () => {

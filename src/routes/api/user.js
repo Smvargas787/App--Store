@@ -9,7 +9,7 @@ module.exports = (express) => {
 // Read All (.all)
 
   router.get('/users', (req, res) => {
-    user.findAll((err) => {
+    user.all((err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);

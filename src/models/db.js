@@ -15,10 +15,10 @@
   });
 
   const user = sequelize.define('user', {
-    id: {
+    name: {
       type: Sequelize.STRING,
     },
-    name: {
+    age: {
       type: Sequelize.INTEGER,
     },
     type: {
@@ -30,7 +30,7 @@
     name: {
       type: Sequelize.STRING,
     },
-    code: {
+    location: {
       type: Sequelize.STRING,
     },
   });

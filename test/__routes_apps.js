@@ -33,7 +33,7 @@ describe('App Routes', () => {
   // Test for a single app
   it('GET /api/v1/apps/:id returns an app obj with id, title, description, and releaseDate properties', (done) => {
     request(server)
-    .get(`/api/v1/apps/${this.app.id}`)
+      .get('/api/v1/apps/' + this.app.id)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect((res) => {
@@ -41,7 +41,6 @@ describe('App Routes', () => {
         expect(app).to.have.property('id');
         expect(app).to.have.property('title');
         expect(app).to.have.property('description');
-        expect(app).to.have.property('releaseDate');
       })
       .end(done);
   });
