@@ -37,5 +37,16 @@ module.exports = (express) => {
     });
   });
 
+  // Update One (.update)
+
+  router.post('/users/:id', (req, res) => {
+    req.body.id = req.params.id;
+    user.update(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
+
   return router;
 };
