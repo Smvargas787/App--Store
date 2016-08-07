@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// Sets up project port
-const port = 3000;
+// Sets up project port with DB info
+const port = process.env.PORT || 3000;
 
 // URL Scheme
 app.use('/api/v1', require('./routes/api')(express));
