@@ -46,17 +46,17 @@ module.exports = (express) => {
       res.status(200).json(data);
     });
   });
-//
-// // Delete One App (.remove)
-//
-//   router.delete('/apps/:id', (req, res) => {
-//     req.body.id = req.params.id;
-//     app.destroy(req.body, (err) => {
-//       res.status(500).json(err);
-//     }, (data) => {
-//       res.status(200).json(data);
-//     });
-//   });
+
+// Delete One App (.remove)
+
+  router.delete('/apps/:id', (req, res) => {
+    req.body.id = req.params.id;
+    app.destroy(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
 
   return router;
 };
