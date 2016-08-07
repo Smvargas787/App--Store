@@ -14,33 +14,33 @@
     logging: false,
   });
 
-  // const user = sequelize.define('user', {
-  //   id: {
-  //     type: Sequelize.STRING,
-  //   },
-  //   name: {
-  //     type: Sequelize.INTEGER,
-  //   },
-  //   type: {
-  //     type: Sequelize.STRING,
-  //   },
-  // });
-  //
-  // const app = sequelize.define('app', {
-  //   name: {
-  //     type: Sequelize.STRING,
-  //   },
-  //   code: {
-  //     type: Sequelize.STRING,
-  //   },
-  // });
-  //
-  // user.hasMany(app, {
-  //   foreignKey: 'userID',
-  // });
-  //
-  // sequelize.sync();
-  //
-  // exports.sequelize = sequelize;
-  // exports.user = user;
-  // exports.app = app;
+  const user = sequelize.define('user', {
+    id: {
+      type: Sequelize.STRING,
+    },
+    name: {
+      type: Sequelize.INTEGER,
+    },
+    type: {
+      type: Sequelize.STRING,
+    },
+  });
+
+  const app = sequelize.define('app', {
+    name: {
+      type: Sequelize.STRING,
+    },
+    code: {
+      type: Sequelize.STRING,
+    },
+  });
+
+  user.hasMany(app, {
+    foreignKey: 'userID',
+  });
+
+  sequelize.sync();
+
+  exports.sequelize = sequelize;
+  exports.user = user;
+  exports.app = app;
