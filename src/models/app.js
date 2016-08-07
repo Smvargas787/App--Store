@@ -42,3 +42,13 @@ exports.update = (payload, err, success) => {
     existingData.updateAttributes(payload).then(success).catch(err);
   }).catch(err);
 };
+
+// Delete One (.remove)
+
+exports.remove = (payload, err, success) => {
+  db.app.remove({
+    where: {
+      id: payload.id,
+    },
+  }).then(success).catch(err);
+};
