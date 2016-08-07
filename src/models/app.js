@@ -15,3 +15,18 @@ exports.all = (err, success) => {
 exports.add = (payload, err, success) => {
   db.app.add(payload).then(success).catch(err);
 };
+
+// Read One (.one)
+
+exports.one = (payload, err, success) => {
+  db.app.one({
+    where: {
+      id: payload.id,
+    },
+      // Defined by sequelize
+    include: [{
+      all: true,
+      nested: true,
+    }],
+  }).then(success).catch(err);
+};
