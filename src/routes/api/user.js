@@ -26,5 +26,16 @@ module.exports = (express) => {
     });
   });
 
+  // Read One (.one)
+
+  router.get('/users/:id', (req, res) => {
+    req.body.id = req.params.id;
+    user.find(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
+
   return router;
 };
