@@ -3,7 +3,7 @@ const app = require('../../models/app');
 module.exports = (express) => {
   const router = express.Router();
 
-  // ------------------------- All Apps ----------------------------//
+  // -------------------------- Apps ----------------------------//
 
 // Read All (.all)
 
