@@ -25,17 +25,17 @@ module.exports = (express) => {
     });
   });
 
-// // Read One (.one)
-//
-//   router.get('/apps/:id', (req, res) => {
-//     req.body.id = req.params.id;
-//     app.find(req.body, (err) => {
-//       res.status(500).json(err);
-//     }, (data) => {
-//       res.status(200).json(data);
-//     });
-//   });
-//
+// Read One (.one)
+
+  router.get('/apps/:id', (req, res) => {
+    req.body.id = req.params.id;
+    app.find(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data);
+    });
+  });
+
 
 
   return router;
