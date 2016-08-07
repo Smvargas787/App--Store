@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// Sets up project port with DB info
+// Sets up project port with DB
 const port = process.env.PORT || 3000;
 
 // URL Scheme
