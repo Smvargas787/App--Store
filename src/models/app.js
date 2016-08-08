@@ -1,8 +1,5 @@
 const db = require('./db');
 
-module.exports = (express) => {
-  const router = express.Router();
-
 // -------------------------- Apps ----------------------------//
 
 
@@ -54,4 +51,3 @@ module.exports = (express) => {
       },
     }).then(success).catch(err);
   };
-};

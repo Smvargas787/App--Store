@@ -16,6 +16,10 @@ const port = process.env.PORT || 3000;
 // URL Scheme
 app.use('/', require('./routes')(express));
 
+// Route Paths
+app.use('/api/v1', require('./routes/api/user')(express));
+app.use('/api/v1', require('./routes/api/app')(express));
+
 // Starts Server
 const server = app.listen(port, () => {
   console.log('Server Running On:', port);
