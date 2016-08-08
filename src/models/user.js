@@ -54,6 +54,4 @@ module.exports = (express) => {
       },
     }).then(success).catch(err);
   };
-
-  return router;
 };

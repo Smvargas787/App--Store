@@ -1,5 +1,6 @@
   const Sequelize = require('sequelize');
 
+  // ENV File Loaded
   require('dotenv').config();
 
   const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
@@ -21,16 +22,19 @@
     age: {
       type: Sequelize.INTEGER,
     },
-    type: {
+    hobby: {
       type: Sequelize.STRING,
     },
   });
 
   const app = sequelize.define('app', {
-    name: {
+    title: {
       type: Sequelize.STRING,
     },
-    location: {
+    description: {
+      type: Sequelize.STRING,
+    },
+    releaseDate: {
       type: Sequelize.STRING,
     },
   });
