@@ -9,13 +9,13 @@ module.exports = (express) => {
   // Read All (.all)
 
   exports.all = (err, success) => {
-    db.user.all().then(success).catch(err);
+    db.user.findAll().then(success).catch(err);
   };
 
   // Create One (.add)
 
   exports.add = (payload, err, success) => {
-    db.user.add(payload).then(success).catch(err);
+    db.user.create(payload).then(success).catch(err);
   };
 
   // Read One (.one)
@@ -48,7 +48,7 @@ module.exports = (express) => {
   // Delete One (.remove)
 
   exports.remove = (payload, err, success) => {
-    db.user.remove({
+    db.user.destroy({
       where: {
         id: payload.id,
       },
