@@ -19,21 +19,32 @@ module.exports = (express) => {
 // Create One (.add)
 
   router.post('/users', (req, res) => {
-    user.create(req.body, (err) => {
+    user.add(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
     });
   });
 
-  // Read One (.one)
+  // Read One by I.D (.one)
 
   router.get('/users/:id', (req, res) => {
     req.body.id = req.params.id;
-    user.find(req.body, (err) => {
+    user.one(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
+    });
+  });
+
+  // Read One app by I.D (.one)
+
+  router.get('/users/:id/apps', (req, res) => {
+    req.body.id = req.params.id;
+    user.one(req.body, (err) => {
+      res.status(500).json(err);
+    }, (data) => {
+      res.status(200).json(data.apps);
     });
   });
 
@@ -52,7 +63,7 @@ module.exports = (express) => {
 
   router.delete('/users/:id', (req, res) => {
     req.body.id = req.params.id;
-    user.destroy(req.body, (err) => {
+    user.remove(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
