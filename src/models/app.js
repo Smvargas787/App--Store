@@ -1,54 +1,57 @@
 const db = require('./db');
 
+module.exports = (express) => {
+  const router = express.Router();
 
 // -------------------------- Apps ----------------------------//
 
 
 // Read All (.all)
 
-exports.all = (err, success) => {
-  db.app.findAll().then(success).catch(err);
-};
+  exports.all = (err, success) => {
+    db.app.findAll().then(success).catch(err);
+  };
 
 // Create One (.add)
 
-exports.add = (payload, err, success) => {
-  db.app.create(payload).then(success).catch(err);
-};
+  exports.add = (payload, err, success) => {
+    db.app.create(payload).then(success).catch(err);
+  };
 
 // Read One (.one)
 
-exports.one = (payload, err, success) => {
-  db.app.find({
-    where: {
-      id: payload.id,
-    },
+  exports.one = (payload, err, success) => {
+    db.app.find({
+      where: {
+        id: payload.id,
+      },
       // Defined by sequelize
-    include: [{
-      all: true,
-      nested: true,
-    }],
-  }).then(success).catch(err);
-};
+      include: [{
+        all: true,
+        nested: true,
+      }],
+    }).then(success).catch(err);
+  };
 
 // Update One (.update)
 
-exports.update = (payload, err, success) => {
-  db.app.find({
-    where: {
-      id: payload.id,
-    },
-  }).then((existingData) => {
-    existingData.updateAttributes(payload).then(success).catch(err);
-  }).catch(err);
-};
+  exports.update = (payload, err, success) => {
+    db.app.find({
+      where: {
+        id: payload.id,
+      },
+    }).then((existingData) => {
+      existingData.updateAttributes(payload).then(success).catch(err);
+    }).catch(err);
+  };
 
 // Delete One (.remove)
 
-exports.remove = (payload, err, success) => {
-  db.app.destroy({
-    where: {
-      id: payload.id,
-    },
-  }).then(success).catch(err);
+  exports.remove = (payload, err, success) => {
+    db.app.destroy({
+      where: {
+        id: payload.id,
+      },
+    }).then(success).catch(err);
+  };
 };
