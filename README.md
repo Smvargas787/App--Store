@@ -24,23 +24,57 @@ To run the unit test
 npm test
 ```
 
-##Routes
+##Users Crud Routes
 
 | Route Hit | Response |
 | --- | --- |
-| GET /api/v1/apps  | ```"id":"330571-002","title":"Battle Field","description":"An app designed to gather trainer's in one area to defend their levels.","releaseDate":"2018-03-05T22:9:20.000ZUTC"}[{"id":"32818-001","title":"Trainer's Gym","description":"An API that can be used to operate inside of a Pokemon gym for users.","releaseDate":"2017-010-13T22:12:20.000ZUTC"}```
-
-
-| Route Hit | Response |
-| --- | --- |
-| GET /api/v1/users  | ```[{"user":{"id":"025","name":"Pikachu","type":"Electric"}} {"user":{"id":"004","name":"Charmander","type":"Fire"}}{"user": {"id":"007","name":"Squirtle","type":"Water"}}]```
+| POST /api/v1/users | ```" {  "name": "Eminem","age": 42,"hobby": "Rapping"}```
 
 
 | Route Hit | Response |
 | --- | --- |
-| GET /api/v1/apps/:id  | ```{"id":"63131-003","title":"Pokedex","description":"An app created to share and engage with others of comic book characters.","releaseDate":"2018-08-05T22:12:00.000ZUTC"}```
+| GET /api/v1/users | ```[{"id": 5,"name": "RicanChica","age": 21,"hobby": "Computer Programming","createdAt": "2016-08-08T03:13:08.000Z","updatedAt": "2016-08-08T03:20:17.000Z"},{"id": 7,"name": "Eminem","age": 42,"hobby": "Rapping","createdAt": "2016-08-08T03:21:24.000Z","updatedAt": "2016-08-08T03:21:24.000Z"}]```
 
 
 | Route Hit | Response |
 | --- | --- |
-| GET /api/v1/users/:id  | ```{"id":"004","name":"Charmander","type":"Fire"}```
+| GET /api/v1/users/:id | ```{"id": 5,"name": "RicanChica","age": 21,"hobby": "Computer Programming","createdAt":"2016-08-08T03:13:08.000Z","updatedAt":"2016-08-08T03:20:17.000Z","apps": []}```
+
+
+| Route Hit | Response |
+| --- | --- |
+| POST /api/v1/users/:id  | ```{"id": 7,"name": "LL Cool J","age": 42,"hobby": "Rapping","createdAt": "2016-08-08T03:21:24.000Z","updatedAt": "2016-08-08T03:46:27.000Z"}```
+
+| Route Hit | Response |
+| --- | --- |
+| DELETE  /api/v1/users/:id| ```1```
+
+##Apps Crud Routes
+
+| Route Hit | Response |
+| --- | --- |
+| POST /api/v1/apps/ | ```" {"title": "Battle Field","description": "Pokemon Battle Ground","releaseDate": "2017-08-12"}```
+
+
+| Route Hit | Response |
+| --- | --- |
+| GET /api/v1/apps/:id | ```{"id": 8,"title": "Pokemon Go","description": "A mobile app designed to catch live pokemon","releaseDate": "2016-07-11","createdAt": "2016-08-08T03:12:05.000Z","updatedAt": "2016-08-08T03:12:05.000Z","userID": null}```
+
+
+| Route Hit | Response |
+| --- | --- |
+| GET /api/v1/users/:id/apps | ```[]```
+
+
+| Route Hit | Response |
+| --- | --- |
+| GET /api/v1/apps | ```[{"id": 7,"title": "Battle Field","description": "Pokemon Battle Ground","releaseDate": "2017-08-12","createdAt": "2016-08-08T03:10:05.000Z","updatedAt": "2016-08-08T03:10:05.000Z","userID": null},{"id": 8,"title": "Pokemon Go","description": "A mobile app designed to catch live pokemon","releaseDate": "2016-07-11","createdAt": "2016-08-08T03:12:05.000Z","updatedAt": "2016-08-08T03:12:05.000Z","userID": null}]```
+
+| Route Hit | Response |
+| --- | --- |
+| POST /api/v1/apps/:id| ```{"id": 7,"title": "Batman VS Superman","description": "Battle of the Heroes","releaseDate": "2020-12-06","createdAt": "2016-08-08T03:10:05.000Z","updatedAt": "2016-08-08T03:10:05.000Z","userID": null}```
+
+
+| Route Hit | Response |
+| --- | --- |
+| DELETE /api/v1/apps/:id | ```1```
