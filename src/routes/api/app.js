@@ -8,7 +8,7 @@ module.exports = (express) => {
 // Read All (.all)
 
   router.get('/apps', (req, res) => {
-    app.findAll((err) => {
+    app.all((err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
@@ -18,7 +18,7 @@ module.exports = (express) => {
 // Create One (.add)
 
   router.post('/apps', (req, res) => {
-    app.create(req.body, (err) => {
+    app.add(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
@@ -29,7 +29,7 @@ module.exports = (express) => {
 
   router.get('/apps/:id', (req, res) => {
     req.body.id = req.params.id;
-    app.find(req.body, (err) => {
+    app.one(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
@@ -51,7 +51,7 @@ module.exports = (express) => {
 
   router.delete('/apps/:id', (req, res) => {
     req.body.id = req.params.id;
-    app.destroy(req.body, (err) => {
+    app.remove(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
