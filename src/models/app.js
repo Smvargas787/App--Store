@@ -7,13 +7,13 @@ const db = require('./db');
 // Read All (.all)
 
 exports.all = (err, success) => {
-  db.app.all().then(success).catch(err);
+  db.app.findAll().then(success).catch(err);
 };
 
 // Create One (.add)
 
 exports.add = (payload, err, success) => {
-  db.app.add(payload).then(success).catch(err);
+  db.app.create(payload).then(success).catch(err);
 };
 
 // Read One (.one)
@@ -46,7 +46,7 @@ exports.update = (payload, err, success) => {
 // Delete One (.remove)
 
 exports.remove = (payload, err, success) => {
-  db.app.remove({
+  db.app.destroy({
     where: {
       id: payload.id,
     },

@@ -26,7 +26,7 @@ module.exports = (express) => {
     });
   });
 
-  // Read One by I.D (.one)
+  // Read One user by I.D (.one)
 
   router.get('/users/:id', (req, res) => {
     req.body.id = req.params.id;
