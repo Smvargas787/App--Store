@@ -39,10 +39,14 @@ module.exports = (express) => {
   // Read One user by I.D (.one)
 
   router.get('/users/:id', (req, res) => {
+    // DEBUG==True Hit Route
+    util.debug('Poke Pathway Activated: GET /users/:id', true);
     req.body.id = req.params.id;
     user.one(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
+      // DEBUG==True Hit Route
+      util.debug('Model Traced Pokemon To: Read One User', data);
       res.status(200).json(data);
     });
   });
