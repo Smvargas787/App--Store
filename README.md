@@ -53,7 +53,8 @@ DB_SCHEMA=mysql
 DB_PORT=3833
 ```
 To run database Server
-```mysql.server start
+```
+mysql.server start
 ```
 
 
