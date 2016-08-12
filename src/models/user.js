@@ -18,7 +18,11 @@ exports.all = (err, success) => {
   // Create One (.add)
 
 exports.add = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Pokemon Found in the findAll Users DB Module', success);
   db.user.create(payload).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Pokemon has been located in the findAll DB', success);
 };
 
   // Read One (.one)
