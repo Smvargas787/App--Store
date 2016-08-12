@@ -1,4 +1,6 @@
 const db = require('./db');
+const util = require('../../lib/util');
+
 
 // -------------------------- Apps ----------------------------//
 
@@ -6,6 +8,8 @@ const db = require('./db');
 // Read All (.all)
 
 exports.all = (err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Pokemon Located in the Create app DB Module', success);
   db.app.findAll().then(success).catch(err);
 };
 

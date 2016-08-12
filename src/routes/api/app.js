@@ -10,7 +10,7 @@ module.exports = (express) => {
 
   router.get('/apps', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Path Activated: GET /apps', true);
+    util.debug('Gym Pathway Activated: GET /apps', true);
     app.all((err) => {
       res.status(500).json(err);
     }, (data) => {
@@ -24,7 +24,7 @@ module.exports = (express) => {
 
   router.post('/apps', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Path Activated: POST /apps', true);
+    util.debug('Gym Pathway Activated: POST /apps', true);
     app.add(req.body, (err) => {
       // DEBUG==True Hit Route
       util.debug('Model Traced Trainer To: Create New App Error', false);
@@ -40,7 +40,7 @@ module.exports = (express) => {
 
   router.get('/apps/:id', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Path Activated: GET /apps:id', true);
+    util.debug('Gym Pathway Activated: GET /apps:id', true);
     req.body.id = req.params.id;
     app.one(req.body, (err) => {
       res.status(500).json(err);
@@ -55,7 +55,7 @@ module.exports = (express) => {
 
   router.post('/apps/:id', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Path Activated: POST /apps:id', true);
+    util.debug('Gym Pathway Activated: POST /apps:id', true);
     req.body.id = req.params.id;
     app.update(req.body, (err) => {
       res.status(500).json(err);
@@ -70,7 +70,7 @@ module.exports = (express) => {
 
   router.delete('/apps/:id', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Path Activated: DELETE /apps:id', true);
+    util.debug('Gym Pathway Activated: DELETE /apps:id', true);
     req.body.id = req.params.id;
     app.remove(req.body, (err) => {
       res.status(500).json(err);
