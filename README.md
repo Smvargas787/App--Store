@@ -36,9 +36,11 @@ To run without the debug tool
 node src/server.js
 ```
 
-In order to retrieve the debug statements you must create a
-```.logs```
-file in your lib folder
+In order to retrieve the debug statements you must create a file in your lib folder.
+```
+.logs
+```
+
 
 ##Users Routes
 
