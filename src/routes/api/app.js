@@ -1,4 +1,5 @@
 const app = require('../../models/app');
+const util = require('../../../lib/util');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -8,9 +9,13 @@ module.exports = (express) => {
 // Read All (.all)
 
   router.get('/apps', (req, res) => {
+    // DEBUG==True Hit Route
+    util.debug('Route Activated: GET /apps', true);
     app.all((err) => {
       res.status(500).json(err);
     }, (data) => {
+      // DEBUG==True Hit Route
+      util.debug('Model Traced: FindAll Apps', data);
       res.status(200).json(data);
     });
   });
