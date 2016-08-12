@@ -1,4 +1,6 @@
 const db = require('./db');
+const util = require('../../lib/util');
+
 
   // ----------------------- Users ---------------------//
 
@@ -6,7 +8,11 @@ const db = require('./db');
   // Read All (.all)
 
 exports.all = (err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Pokemon Found in the Create User DB Module', success);
   db.user.findAll().then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Pokemon has been Created In DB', success);
 };
 
   // Create One (.add)
