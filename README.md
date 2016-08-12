@@ -44,7 +44,18 @@ In order to retrieve the debug statements you must create a file in your lib fol
 You must create a dotenv file in order to run the server properly.
 ```
 .env
+
+NAME=title
+DB_USER=bob
+DB_PASS=
+DB_HOST=127.1.2
+DB_SCHEMA=mysql
+DB_PORT=3833
 ```
+To run database Server
+```mysql.server start
+```
+
 
 ##Users Routes
 
