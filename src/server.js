@@ -25,7 +25,7 @@ app.use('/api/v1', require('./routes/api/app')(express));
 
 // Starts Server
 const server = app.listen(port, () => {
-  console.log('Server Running On:', port);
+  util.debug('Server Running On:', port);
 });
 
   // Makes the server accesible
