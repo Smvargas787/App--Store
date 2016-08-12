@@ -9,19 +9,27 @@ const util = require('../../lib/util');
 
 exports.all = (err, success) => {
   // DEBUG==True Hit Route
-  util.debug('Pokemon Located in the Create app DB Module', success);
+  util.debug('Trainers Pokemon Balls Located in the Create app DB Module', success);
   db.app.findAll().then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Trainer Gym App Created In DB', success);
 };
 
 // Create One (.add)
 
 exports.add = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Trainers Pokemon Balls located in the findAll apps DB Module', success);
   db.app.create(payload).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Trainer Gym FindAll App In DB Initiated', success);
 };
 
 // Read One (.one)
 
 exports.one = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Trainers Pokemon Balls located in the find app DB Module', success);
   db.app.find({
     where: {
       id: payload.id,
@@ -32,6 +40,8 @@ exports.one = (payload, err, success) => {
       nested: true,
     }],
   }).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Trainer Gym find App in DB Initiated', success);
 };
 
 // Update One (.update)
