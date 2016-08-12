@@ -12,7 +12,7 @@ module.exports = (express) => {
 
   router.get('/users', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Pathway Activated: GET /users', true);
+    util.debug('Poke Pathway Activated: GET /users', true, 'log');
     user.all((err) => {
       res.status(500).json(err);
     }, (data) => {
@@ -26,7 +26,7 @@ module.exports = (express) => {
 
   router.post('/users', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Pathway Activated: POST /users', true);
+    util.debug('Poke Pathway Activated: POST /users', true, 'log');
     user.add(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
@@ -40,7 +40,7 @@ module.exports = (express) => {
 
   router.get('/users/:id', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Pathway Activated: GET /users/:id', true);
+    util.debug('Poke Pathway Activated: GET /users/:id', true, 'log');
     req.body.id = req.params.id;
     user.one(req.body, (err) => {
       res.status(500).json(err);
@@ -55,7 +55,7 @@ module.exports = (express) => {
 
   router.get('/users/:id/apps', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Pathway Activated: GET /users/:id/apps', true);
+    util.debug('Poke Pathway Activated: GET /users/:id/apps', true, 'log');
     req.body.id = req.params.id;
     user.one(req.body, (err) => {
       res.status(500).json(err);
@@ -70,7 +70,7 @@ module.exports = (express) => {
 
   router.post('/users/:id', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Pathway Activated: POST /users/:id', true);
+    util.debug('Poke Pathway Activated: POST /users/:id', true, 'log');
     req.body.id = req.params.id;
     user.update(req.body, (err) => {
       res.status(500).json(err);
@@ -85,7 +85,7 @@ module.exports = (express) => {
 
   router.delete('/users/:id', (req, res) => {
     // DEBUG==True Hit Route
-    util.debug('Poke Pathway Activated: DELETE /users/:id', true);
+    util.debug('Poke Pathway Activated: DELETE /users/:id', true, 'warn');
     req.body.id = req.params.id;
     user.remove(req.body, (err) => {
       res.status(500).json(err);
