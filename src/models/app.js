@@ -63,9 +63,13 @@ exports.update = (payload, err, success) => {
 // Delete One (.remove)
 
 exports.remove = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Trainers Pokemon Balls lost in the Destroyed app Module', success);
   db.app.destroy({
     where: {
       id: payload.id,
     },
   }).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Trainers Gym Destroyed App in DB Initiated', success);
 };
