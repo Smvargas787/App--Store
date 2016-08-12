@@ -47,6 +47,8 @@ exports.one = (payload, err, success) => {
 // Update One (.update)
 
 exports.update = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Trainers Pokemon Balls located in the Updated app Module', success);
   db.app.find({
     where: {
       id: payload.id,
@@ -54,6 +56,8 @@ exports.update = (payload, err, success) => {
   }).then((existingData) => {
     existingData.updateAttributes(payload).then(success).catch(err);
   }).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Trainer Gym Updated App in DB Initiated', success);
 };
 
 // Delete One (.remove)
