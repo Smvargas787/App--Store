@@ -41,6 +41,10 @@ In order to retrieve the debug statements you must create a file in your lib fol
 .logs
 ```
 
+You must create a dotenv file in order to run the server properly.
+```
+.env
+```
 
 ##Users Routes
 
