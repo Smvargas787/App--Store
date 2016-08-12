@@ -69,10 +69,14 @@ module.exports = (express) => {
   // Update One (.update)
 
   router.post('/users/:id', (req, res) => {
+    // DEBUG==True Hit Route
+    util.debug('Poke Pathway Activated: POST /users/:id', true);
     req.body.id = req.params.id;
     user.update(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
+      // DEBUG==True Hit Route
+      util.debug('Model Traced Pokemon To An: Updated One User', data);
       res.status(200).json(data);
     });
   });
