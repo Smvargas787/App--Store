@@ -28,6 +28,8 @@ exports.add = (payload, err, success) => {
   // Read One (.one)
 
 exports.one = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Pokemon found in the find User DB Module', success);
   db.user.find({
     where: {
       id: payload.id,
@@ -38,17 +40,23 @@ exports.one = (payload, err, success) => {
       nested: true,
     }],
   }).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Pokemon has been located in the find one DB', success);
 };
 
   // Update One (.update)
 
 exports.update = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Pokemon found in the Updated User DB Module', success);
   db.user.find({
     where: {
       id: payload.id,
     },
   }).then((existingData) => {
     existingData.updateAttributes(payload).then(success).catch(err);
+    // DEBUG==True Hit Route
+    util.debug('Pokemon located in the Updated section In DB', success);
   }).catch(err);
 };
 
