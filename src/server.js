@@ -2,6 +2,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+// DEBUG = TRUE Statment
+const util = require('../lib/util');
+
 // Web Sever
 const app = express();
 
