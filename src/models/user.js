@@ -63,9 +63,13 @@ exports.update = (payload, err, success) => {
   // Delete One (.remove)
 
 exports.remove = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Pokemon found in the Removed User Module', success);
   db.user.destroy({
     where: {
       id: payload.id,
     },
   }).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Pokemon lost in the Removed section In DB', success);
 };
