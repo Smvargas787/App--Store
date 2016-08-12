@@ -15,7 +15,7 @@ module.exports = (express) => {
       res.status(500).json(err);
     }, (data) => {
       // DEBUG==True Hit Route
-      util.debug('Model Traced Pokemon To: FindAll Apps', data);
+      util.debug('Model Traced Trainer To: FindAll Apps', data);
       res.status(200).json(data);
     });
   });
@@ -27,11 +27,11 @@ module.exports = (express) => {
     util.debug('Poke Path Activated: POST /apps', true);
     app.add(req.body, (err) => {
       // DEBUG==True Hit Route
-      util.debug('Model Traced Pokemon To: Create New App Error', false);
+      util.debug('Model Traced Trainer To: Create New App Error', false);
       res.status(500).json(err);
     }, (data) => {
       // DEBUG==True Hit Route
-      util.debug('Model Traced Pokemon To: Create New App', data);
+      util.debug('Model Traced Trainer To: Create New App', data);
       res.status(200).json(data);
     });
   });
@@ -46,7 +46,7 @@ module.exports = (express) => {
       res.status(500).json(err);
     }, (data) => {
       // DEBUG==True Hit Route
-      util.debug('Model Traced Pokemon To: Read One App', data);
+      util.debug('Model Traced Trainer To: Read One App', data);
       res.status(200).json(data);
     });
   });
@@ -61,7 +61,7 @@ module.exports = (express) => {
       res.status(500).json(err);
     }, (data) => {
       // DEBUG==True Hit Route
-      util.debug('Model Traced Pokemon To An: Updated One App', data);
+      util.debug('Model Traced Trainer To An: Updated One App', data);
       res.status(200).json(data);
     });
   });
@@ -76,7 +76,7 @@ module.exports = (express) => {
       res.status(500).json(err);
     }, (data) => {
       // DEBUG==True Hit Route
-      util.debug('Model Traced Pokemon Back To: Destroyed One App', data);
+      util.debug('Model Traced Trainer Back To: Destroyed One App', data);
       res.status(200).json(data);
     });
   });

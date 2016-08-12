@@ -1,4 +1,6 @@
 const user = require('../../models/user');
+const util = require('../../../lib/util');
+
 
 module.exports = (express) => {
   const router = express.Router();
@@ -9,9 +11,13 @@ module.exports = (express) => {
 // Read All (.all)
 
   router.get('/users', (req, res) => {
+    // DEBUG==True Hit Route
+    util.debug('Poke Pathway Activated: GET /users', true);
     user.all((err) => {
       res.status(500).json(err);
     }, (data) => {
+      // DEBUG==True Hit Route
+      util.debug('Model Traced Pokemon To: FindAll Users', data);
       res.status(200).json(data);
     });
   });
@@ -19,9 +25,13 @@ module.exports = (express) => {
 // Create One (.add)
 
   router.post('/users', (req, res) => {
+    // DEBUG==True Hit Route
+    util.debug('Poke Pathway Activated: POST /users', true);
     user.add(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
+      // DEBUG==True Hit Route
+      util.debug('Model Traced Pokemon To A: Created A New User', data);
       res.status(200).json(data);
     });
   });
