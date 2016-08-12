@@ -84,10 +84,14 @@ module.exports = (express) => {
   // Delete One (.remove)
 
   router.delete('/users/:id', (req, res) => {
+    // DEBUG==True Hit Route
+    util.debug('Poke Pathway Activated: DELETE /users/:id', true);
     req.body.id = req.params.id;
     user.remove(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
+      // DEBUG==True Hit Route
+      util.debug('Model Traced Pokemon To A: Destroyed One User', data);
       res.status(200).json(data);
     });
   });
