@@ -68,3 +68,5 @@ describe('routes', () => {
           age: '5',
           hobby: 'Transforming',
         },
+        description: 'Poke Pathway POST Activated: Users',
+      },
