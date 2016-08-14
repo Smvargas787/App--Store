@@ -55,3 +55,16 @@ describe('routes', () => {
         method: 'get',
         description: 'Poke Pathway GET Activated: Users',
       },
+      {
+        route: '/api/users',
+        method: 'get',
+        description: 'Poke Pathway GET Activated: Users',
+      },
+      {
+        route: '/api/users',
+        method: 'post',
+        dataToSend: {
+          name: 'Eevee',
+          age: '5',
+          hobby: 'Transforming',
+        },
