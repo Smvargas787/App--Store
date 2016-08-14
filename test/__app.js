@@ -41,3 +41,13 @@ let testApp = {};
             done();
           });
         });
+
+        // -------------------------- 1 App Test Reader ----------------------------//
+            it('Read One', (done) => {
+              app.find(testApp, (error) => {
+                util.debug('Cannot find One Pikachu in this App anywhere', error);
+              }, (oneApp) => {
+                expect(oneApp.id).to.be.equal(testApp.id);
+                done();
+              });
+            });
