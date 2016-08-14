@@ -41,3 +41,13 @@ let testUser = {};
                     done();
                   });
                 });
+
+  // -------------------------- 1 App Test Reader ----------------------------//
+                it('Read One', (done) => {
+                  user.find(testUser, (error) => {
+                    util.debug('Err! Trainers name is too difficult, cannot read this one.', error);
+                  }, (oneUser) => {
+                    expect(oneUser.id).to.be.equal(testUser.id);
+                    done();
+                  });
+                });
