@@ -31,3 +31,13 @@ let testUser = {};
                 done();
               });
             });
+
+  // -------------------------- Reading Tests ----------------------------//
+                it('Read All', (done) => {
+                  user.findAll((error) => {
+                    util.debug('Failed to find all of the Pokemon Trainers listed', error);
+                  }, (allUsers) => {
+                    expect(allUsers.length).to.be.above(1);
+                    done();
+                  });
+                });
