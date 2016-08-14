@@ -65,3 +65,12 @@ let testApp = {};
             description: 'An ispy of random sightings of pokemon around the globe',
             releaseDate: '2016-10-30'
           };
+          app.update(updateApp, (error) => {
+            util.debug('Unable to Update New Pokemon Game App', error);
+          }, (updateDBApp) => {
+            expect(updateDBApp.name).to.be.equal(updateApp.name);
+            testApp = updateDBApp;
+            done();
+          });
+        });
+    });
