@@ -5,6 +5,10 @@
     },
     "extends": "airbnb",
 
+    "plugins": [
+    "react"
+    ],
+
     "rules": {
             "new-cap": 0,
             "prefer-template": 0,
