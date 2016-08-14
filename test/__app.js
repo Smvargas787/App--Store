@@ -51,3 +51,8 @@ let testApp = {};
                 done();
               });
             });
+
+        // -------------------------- 1 App Test Creater ----------------------------//
+          it('Create One', () => {
+            expect(testApp.id).to.not.be.null;
+          });
