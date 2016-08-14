@@ -38,5 +38,7 @@ describe('routes', () => {
         dataToSend: {
           name: 'Brock',
           age: '23',
-          hobby: 'Falling Asleep Catching Pokemon',
+          hobby: 'Creator of Pokemon Go',
         },
+        description: 'Gym Pathway POST Activated: Apps',
+    },
