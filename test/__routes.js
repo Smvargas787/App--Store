@@ -42,3 +42,10 @@ describe('routes', () => {
         },
         description: 'Gym Pathway POST Activated: Apps',
     },
+    {
+        route: '/api/apps/1',
+        method: 'delete',
+        description: 'Gym Pathway DELETE Activated: Apps',
+      },
+
+      // -------------------------- Users Routes ----------------------------//
