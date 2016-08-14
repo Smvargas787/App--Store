@@ -5,10 +5,10 @@ const util = require('../lib/util');
 let testUser = {};
 
   // -------------------------- Tests Set Up ----------------------------//
-  describe('Users', () => {
-    beforeEach((done) => {
-      const mockUser = {
-        name: 'Ash',
+describe('Users', () => {
+  beforeEach((done) => {
+    const mockUser = {
+      name: 'Ash',
         age: 24,
         hobby: 'Catching Pokemon',
       };
@@ -65,3 +65,13 @@ let testUser = {};
                         age: 31,
                         hobby: 'Being Evil',
                       };
+
+                      user.update(updateUser, (error) => {
+                            util.debug('Unable to Update Evillllll', error);
+                          }, (updateDBUser) => {
+                            expect(updateDBUser.name).to.be.equal(updateUser.name);
+                            testUser = updateDBUser;
+                            done();
+                          });
+                        });
+                      });
