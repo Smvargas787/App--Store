@@ -21,3 +21,13 @@ let testApp = {};
         done();
       });
     });
+
+    // -------------------------- Mutiple Apps DB Stopper ----------------------------//
+      afterEach((done) => {
+        app.destroy(testApp, (error) => {
+          util.debug('Not Possible to Delete A Pikachu', error);
+        }, (deletedReply) => {
+          expect(deletedReply).to.be.equal(1);
+          done();
+        });
+      });
