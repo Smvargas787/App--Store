@@ -79,4 +79,12 @@ describe('routes', () => {
 
     // -------------------------- Array Loop ----------------------------//
 
-    
+    for (let i = 0; i < routes.length; i++) {
+      if (routes[i].method === 'get') {
+        it(routes[i].description, (done) => {
+          request(server)
+            .get(routes[i].route)
+            .expect(200)
+            .end(done);
+          util.debug('Gym Pathway Activated: GET /apps', true);
+        });
