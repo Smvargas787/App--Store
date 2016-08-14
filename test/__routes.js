@@ -8,3 +8,8 @@ beforeEach((done) => {
 
   done();
 });
+
+afterEach((done) => {
+  server.close();
+  done();
+});
