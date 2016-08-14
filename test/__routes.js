@@ -49,3 +49,9 @@ describe('routes', () => {
       },
 
       // -------------------------- Users Routes ----------------------------//
+
+      {
+        route: '/api/users',
+        method: 'get',
+        description: 'Poke Pathway GET Activated: Users',
+      },
