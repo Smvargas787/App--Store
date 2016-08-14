@@ -57,6 +57,18 @@ To run database Server
 mysql.server start
 ```
 
+###Unit Testing
+
+To initiate the Unit Tests
+```
+mocha
+```
+
+To See All Errors and Debugs of the Unit Tests
+```
+DEBUG=true mocha
+```
+
 
 ##Users Routes
 
