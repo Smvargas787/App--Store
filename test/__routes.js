@@ -88,3 +88,12 @@ describe('routes', () => {
             .end(done);
           util.debug('Gym Pathway Activated: GET /apps', true);
         });
+      } else if (routes[i].method === 'post') {
+      it(routes[i].description, (done) => {
+        request(server)
+          .post(routes[i].route)
+          .send(routes.dataToSend)
+          .expect(200)
+          .end(done);
+        util.debug('Gym Pathway Denied Access: POST /apps', true);
+      });
