@@ -21,3 +21,13 @@ let testUser = {};
               done();
             });
           });
+
+  // -------------------------- Mutiple Users DB Stopper ----------------------------//
+            afterEach((done) => {
+              user.destroy(testUser, (error) => {
+                util.debug('Stop! You are unable to delete this trainer.', error);
+              }, (deletedResponse) => {
+                expect(deletedResponse).to.be.equal(1);
+                done();
+              });
+            });
