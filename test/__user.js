@@ -12,3 +12,12 @@ let testUser = {};
         age: 24,
         hobby: 'Catching Pokemon',
       };
+
+  // -------------------------- Creating Mocha Stub ----------------------------//
+            user.create(mockUser, (error) => {
+              util.debug('Error! Cannot create Poke Trainer', error);
+            }, (newDbUser) => {
+              testUser = newDbUser;
+              done();
+            });
+          });
