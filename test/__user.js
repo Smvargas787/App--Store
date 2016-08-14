@@ -56,3 +56,12 @@ let testUser = {};
                   it('Create One', () => {
                     expect(testUser.id).to.not.be.null;
                   });
+
+  // -------------------------- 1 App Test Updater ----------------------------//
+                    it('Update One', (done) => {
+                      const updateUser = {
+                        id: testUser.id,
+                        name: 'Jesse',
+                        age: 31,
+                        hobby: 'Being Evil',
+                      };
