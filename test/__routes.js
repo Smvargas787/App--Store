@@ -70,3 +70,9 @@ describe('routes', () => {
         },
         description: 'Poke Pathway POST Activated: Users',
       },
+      {
+        route: '/api/users/1',
+        method: 'delete',
+        description: 'Poke Pathway DELETE Activated: Users',
+      },
+    ];
