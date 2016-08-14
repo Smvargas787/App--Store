@@ -14,7 +14,7 @@ describe('Apps', () => {
     };
 
   // -------------------------- Creating Mocha Stub ----------------------------//
-    app.create(mockApp, (error) => {
+    app.add(mockApp, (error) => {
       util.debug('Error! Pikachus cannot be man created.', error);
     }, (newDBapp) => {
       testApp = newDBapp;
@@ -24,8 +24,8 @@ describe('Apps', () => {
 
   // -------------------------- Mutiple Apps DB Stopper ----------------------------//
   afterEach((done) => {
-    app.destroy(testApp, (error) => {
-      util.debug('Not Possible to Delete A Pikachu', error);
+    app.remove(testApp, (error) => {
+      util.debug('Not Possible to Delete A Pikachu in this game', error);
     }, (deletedReply) => {
       expect(deletedReply).to.be.equal(1);
       done();
@@ -34,7 +34,7 @@ describe('Apps', () => {
 
   // -------------------------- Reading Tests ----------------------------//
   it('Read All', (done) => {
-    app.findAll((error) => {
+    app.all((error) => {
       util.debug('Failed to find all the pikachus in Apps', error);
     }, (allApps) => {
       expect(allApps.length).to.be.above(1);
@@ -44,7 +44,7 @@ describe('Apps', () => {
 
   // -------------------------- 1 App Test Reader ----------------------------//
   it('Read One', (done) => {
-    app.find(testApp, (error) => {
+    app.one(testApp, (error) => {
       util.debug('Cannot find One Pikachu in this App anywhere', error);
     }, (oneApp) => {
       expect(oneApp.id).to.be.equal(testApp.id);

@@ -18,22 +18,22 @@ describe('routes', () => {
   const routes = [
       // -------------------------- Apps Routes ----------------------------//
     {
-      route: '/api/apps',
+      route: '/api/v1/apps',
       method: 'get',
       description: 'Gym Pathway GET Activated: Apps',
     },
     {
-      route: '/api/apps',
+      route: '/api/v1/apps',
       method: 'get',
       description: 'Gym Pathway GET Activated: Apps',
     },
     {
-      route: '/api/apps',
+      route: '/api/v1/apps',
       method: 'post',
       description: 'Gym Pathway POST Activated: Apps',
     },
     {
-      route: '/api/apps',
+      route: '/api/v1/apps',
       method: 'post',
       dataToSend: {
         name: 'Brock',
@@ -43,7 +43,7 @@ describe('routes', () => {
       description: 'Gym Pathway POST Activated: Apps',
     },
     {
-      route: '/api/apps/1',
+      route: '/api/v1/apps/1',
       method: 'delete',
       description: 'Gym Pathway DELETE Activated: Apps',
     },
@@ -51,17 +51,17 @@ describe('routes', () => {
       // -------------------------- Users Routes ----------------------------//
 
     {
-      route: '/api/users',
+      route: '/api/v1/users',
       method: 'get',
       description: 'Poke Pathway GET Activated: Users',
     },
     {
-      route: '/api/users',
+      route: '/api/v1/users',
       method: 'get',
       description: 'Poke Pathway GET Activated: Users',
     },
     {
-      route: '/api/users',
+      route: '/api/v1/users',
       method: 'post',
       dataToSend: {
         name: 'Eevee',
@@ -71,7 +71,7 @@ describe('routes', () => {
       description: 'Poke Pathway POST Activated: Users',
     },
     {
-      route: '/api/users/1',
+      route: '/api/v1/users/1',
       method: 'delete',
       description: 'Poke Pathway DELETE Activated: Users',
     },

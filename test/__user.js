@@ -14,7 +14,7 @@ describe('Users', () => {
     };
 
   // -------------------------- Creating Mocha Stub ----------------------------//
-    user.create(mockUser, (error) => {
+    user.add(mockUser, (error) => {
       util.debug('Error! Cannot create Poke Trainer', error);
     }, (newDbUser) => {
       testUser = newDbUser;
@@ -24,7 +24,7 @@ describe('Users', () => {
 
   // -------------------------- Mutiple Users DB Stopper ----------------------------//
   afterEach((done) => {
-    user.destroy(testUser, (error) => {
+    user.remove(testUser, (error) => {
       util.debug('Stop! You are unable to delete this trainer.', error);
     }, (deletedResponse) => {
       expect(deletedResponse).to.be.equal(1);
@@ -44,7 +44,7 @@ describe('Users', () => {
 
   // -------------------------- 1 User Test Reader ----------------------------//
   it('Read One', (done) => {
-    user.find(testUser, (error) => {
+    user.one(testUser, (error) => {
       util.debug('Err! Trainers name is too difficult, cannot read this one.', error);
     }, (oneUser) => {
       expect(oneUser.id).to.be.equal(testUser.id);
