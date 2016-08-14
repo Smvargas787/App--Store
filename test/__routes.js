@@ -22,4 +22,13 @@ describe('routes', () => {
         method: 'get',
         description: 'Gym Pathway GET Activated: Apps',
       },
-      
+      {
+        route: '/api/apps',
+        method: 'get',
+        description: 'Gym Pathway GET Activated: Apps',
+      },
+      {
+        route: '/api/apps',
+        method: 'post',
+        description: 'Gym Pathway POST Activated: Apps',
+      },
