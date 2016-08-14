@@ -32,3 +32,11 @@ describe('routes', () => {
         method: 'post',
         description: 'Gym Pathway POST Activated: Apps',
       },
+      {
+        route: '/api/apps',
+        method: 'post',
+        dataToSend: {
+          name: 'Brock',
+          age: '23',
+          hobby: 'Falling Asleep Catching Pokemon',
+        },
