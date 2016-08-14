@@ -13,3 +13,13 @@ afterEach((done) => {
   server.close();
   done();
 });
+
+describe('routes', () => {
+    const routes = [
+      // -------------------------- Apps Routes ----------------------------//
+      {
+        route: '/api/apps',
+        method: 'get',
+        description: 'Gym Pathway GET Activated: Apps',
+      },
+      
