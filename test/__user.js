@@ -42,7 +42,7 @@ let testUser = {};
                   });
                 });
 
-  // -------------------------- 1 App Test Reader ----------------------------//
+  // -------------------------- 1 User Test Reader ----------------------------//
                 it('Read One', (done) => {
                   user.find(testUser, (error) => {
                     util.debug('Err! Trainers name is too difficult, cannot read this one.', error);
@@ -52,7 +52,7 @@ let testUser = {};
                   });
                 });
 
-  // -------------------------- 1 App Test Creater ----------------------------//
+  // -------------------------- 1 User Test Creater ----------------------------//
                   it('Create One', () => {
                     expect(testUser.id).to.not.be.null;
                   });
