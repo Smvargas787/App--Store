@@ -5,7 +5,7 @@ const util = require('../lib/util');
 let testApp = {};
 
   // -------------------------- Tests Set Up ----------------------------//
-describe('Apps', () => {
+describe('Trainer Gyms', () => {
   beforeEach((done) => {
     const mockApp = {
       title: 'WheresPikachu?',
@@ -33,7 +33,7 @@ describe('Apps', () => {
   });
 
   // -------------------------- Reading Tests ----------------------------//
-  it('Read All', (done) => {
+  it('Find All Pikachus', (done) => {
     app.all((error) => {
       util.debug('Failed to find all the pikachus in Apps', error);
     }, (allApps) => {
@@ -43,7 +43,7 @@ describe('Apps', () => {
   });
 
   // -------------------------- 1 App Test Reader ----------------------------//
-  it('Read One', (done) => {
+  it('Find One Pikachu', (done) => {
     app.one(testApp, (error) => {
       util.debug('Cannot find One Pikachu in this App anywhere', error);
     }, (oneApp) => {
@@ -53,12 +53,12 @@ describe('Apps', () => {
   });
 
   // -------------------------- 1 App Test Creater ----------------------------//
-  it('Create One', () => {
+  it('Create A Pikachu', () => {
     expect(testApp.id).to.not.be.null;
   });
 
   // -------------------------- 1 App Test Updater ----------------------------//
-  it('Update One', (done) => {
+  it('Update A Pikachus Power', (done) => {
     const updateApp = {
       id: testApp.id,
       title: 'Poke Hide & Seek',

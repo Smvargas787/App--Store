@@ -5,7 +5,7 @@ const util = require('../lib/util');
 let testUser = {};
 
   // -------------------------- Tests Set Up ----------------------------//
-describe('Users', () => {
+describe('Pokemon', () => {
   beforeEach((done) => {
     const mockUser = {
       name: 'Ash',
@@ -33,8 +33,8 @@ describe('Users', () => {
   });
 
   // -------------------------- Reading Tests ----------------------------//
-  it('Read All', (done) => {
-    user.findAll((error) => {
+  it('Find All Pokemon', (done) => {
+    user.all((error) => {
       util.debug('Failed to find all of the Pokemon Trainers listed', error);
     }, (allUsers) => {
       expect(allUsers.length).to.be.above(1);
@@ -43,7 +43,7 @@ describe('Users', () => {
   });
 
   // -------------------------- 1 User Test Reader ----------------------------//
-  it('Read One', (done) => {
+  it('Retrieve One Pokemon', (done) => {
     user.one(testUser, (error) => {
       util.debug('Err! Trainers name is too difficult, cannot read this one.', error);
     }, (oneUser) => {
@@ -53,12 +53,12 @@ describe('Users', () => {
   });
 
   // -------------------------- 1 User Test Creater ----------------------------//
-  it('Create One', () => {
+  it('Create Your Own Pokemon', () => {
     expect(testUser.id).to.not.be.null;
   });
 
   // -------------------------- 1 App Test Updater ----------------------------//
-  it('Update One', (done) => {
+  it('Update Your Pokemon', (done) => {
     const updateUser = {
       id: testUser.id,
       name: 'Jesse',

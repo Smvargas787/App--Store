@@ -14,7 +14,7 @@ afterEach((done) => {
   done();
 });
 
-describe('routes', () => {
+describe('Gym Pathways', () => {
   const routes = [
       // -------------------------- Apps Routes ----------------------------//
     {
