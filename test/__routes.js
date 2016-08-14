@@ -97,3 +97,15 @@ describe('routes', () => {
           .end(done);
         util.debug('Gym Pathway Denied Access: POST /apps', true);
       });
+    } else {
+    (routes[i].method === 'delete')
+    it(routes[i].description, (done) => {
+      request(server)
+        .delete(routes[i].route)
+        .expect(200)
+        .end(done);
+      util.debug('Gym Pathway Denied Access: DELETE /apps', true);
+    });
+  }
+}
+});
