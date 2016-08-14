@@ -31,3 +31,13 @@ let testApp = {};
           done();
         });
       });
+
+      // -------------------------- Reading Tests ----------------------------//
+        it('Read All', (done) => {
+          app.findAll((error) => {
+            util.debug('Failed to find all the pikachus in Apps', error);
+          }, (allApps) => {
+            expect(allApps.length).to.be.above(1);
+            done();
+          });
+        });
