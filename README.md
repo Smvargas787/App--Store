@@ -45,6 +45,7 @@ You must create a dotenv file in order to run the server properly.
 ```
 .env
 
+Example:
 NAME=title
 DB_USER=bob
 DB_PASS=
@@ -56,8 +57,7 @@ To run database Server
 ```
 mysql.server start
 
-You must have at least one set of User & App Data in your database
-to get positive results when unit testing.
+You must have at least one set of User & App Data in your database to get positive results for the 'Find All Gym Locations' test when unit testing.
 ```
 
 ##Unit Testing
