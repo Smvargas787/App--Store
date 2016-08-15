@@ -55,6 +55,9 @@ DB_PORT=3833
 To run database Server
 ```
 mysql.server start
+
+You must have at least one set of User & App Data in your database
+to get positive results when unit testing.
 ```
 
 ##Unit Testing

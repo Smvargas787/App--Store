@@ -4,6 +4,16 @@ const util = require('../../lib/util');
 
 // -------------------------- Apps ----------------------------//
 
+// Create One (.add)
+
+exports.add = (payload, err, success) => {
+  // DEBUG==True Hit Route
+  util.debug('Trainers Pokemon Balls located in the findAll apps DB Module', success);
+  db.app.create(payload).then(success).catch(err);
+  // DEBUG==True Hit Route
+  util.debug('Trainers Gym FindAll App In DB Initiated', success);
+};
+
 
 // Read All (.all)
 
@@ -15,15 +25,6 @@ exports.all = (err, success) => {
   util.debug('Trainers Gym App Created In DB', success);
 };
 
-// Create One (.add)
-
-exports.add = (payload, err, success) => {
-  // DEBUG==True Hit Route
-  util.debug('Trainers Pokemon Balls located in the findAll apps DB Module', success);
-  db.app.create(payload).then(success).catch(err);
-  // DEBUG==True Hit Route
-  util.debug('Trainers Gym FindAll App In DB Initiated', success);
-};
 
 // Read One (.one)
 

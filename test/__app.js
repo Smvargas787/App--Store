@@ -5,6 +5,7 @@ const util = require('../lib/util');
 let testApp = {};
 
   // -------------------------- Tests Set Up ----------------------------//
+
 describe('Trainer Gyms', () => {
   beforeEach((done) => {
     const mockApp = {
@@ -14,6 +15,7 @@ describe('Trainer Gyms', () => {
     };
 
   // -------------------------- Creating Mocha Stub ----------------------------//
+
     app.add(mockApp, (error) => {
       util.debug('Error! Pikachus cannot be man created.', error);
     }, (newDBapp) => {
@@ -23,6 +25,7 @@ describe('Trainer Gyms', () => {
   });
 
   // -------------------------- Mutiple Apps DB Stopper ----------------------------//
+
   afterEach((done) => {
     app.remove(testApp, (error) => {
       util.debug('Not Possible to Delete A Pikachu in this game', error);
@@ -33,9 +36,10 @@ describe('Trainer Gyms', () => {
   });
 
   // -------------------------- Reading Tests ----------------------------//
-  it('Find All Pikachus', (done) => {
+
+  it('Find All Gym Locations', (done) => {
     app.all((error) => {
-      util.debug('Failed to find all the pikachus in Apps', error);
+      util.debug('Failed to find all the gyms in apps', error);
     }, (allApps) => {
       expect(allApps.length).to.be.above(1);
       done();
@@ -43,9 +47,10 @@ describe('Trainer Gyms', () => {
   });
 
   // -------------------------- 1 App Test Reader ----------------------------//
-  it('Find One Pikachu', (done) => {
+
+  it('Find One Poke Gym', (done) => {
     app.one(testApp, (error) => {
-      util.debug('Cannot find One Pikachu in this App anywhere', error);
+      util.debug('Cannot find One poke gym anywhere', error);
     }, (oneApp) => {
       expect(oneApp.id).to.be.equal(testApp.id);
       done();
@@ -53,12 +58,15 @@ describe('Trainer Gyms', () => {
   });
 
   // -------------------------- 1 App Test Creater ----------------------------//
-  it('Create A Pikachu', () => {
+
+  it('Create A Pokemon Gym', (done) => {
     expect(testApp.id).to.not.be.null;
+    done();
   });
 
   // -------------------------- 1 App Test Updater ----------------------------//
-  it('Update A Pikachus Power', (done) => {
+
+  it('Update A Gyms Levels', (done) => {
     const updateApp = {
       id: testApp.id,
       title: 'Poke Hide & Seek',
@@ -66,7 +74,7 @@ describe('Trainer Gyms', () => {
       releaseDate: '2016-10-30',
     };
     app.update(updateApp, (error) => {
-      util.debug('Failed to Update New Pokemon Game App', error);
+      util.debug('Failed to Update New Poke Gym', error);
     }, (updateDBApp) => {
       expect(updateDBApp.name).to.be.equal(updateApp.name);
       testApp = updateDBApp;
