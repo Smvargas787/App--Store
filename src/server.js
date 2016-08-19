@@ -3,8 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // DEBUG = TRUE Statment
-const util = require('../lib/util');
-
+const util = require('timeto_go');
 // Web Sever
 const app = express();
 

@@ -1,5 +1,5 @@
 const request = require('supertest');
-const util = require('../lib/util');
+const util = require('timeto_go');
 
 let server;
 

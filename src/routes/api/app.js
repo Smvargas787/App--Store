@@ -1,5 +1,5 @@
 const app = require('../../models/app');
-const util = require('../../../lib/util');
+const util = require('timeto_go');
 
 module.exports = (express) => {
   const router = express.Router();

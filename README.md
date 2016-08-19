@@ -26,21 +26,6 @@ npm test
 
 ##Usage
 
-To turn on the debug tool
-```
-DEBUG=true node src/server.js
-```
-
-To run without the debug tool
-```
-node src/server.js
-```
-
-In order to retrieve the debug statements you must create a file in your lib folder.
-```
-.logs
-```
-
 You must create a dotenv file in order to run the server properly.
 ```
 .env
