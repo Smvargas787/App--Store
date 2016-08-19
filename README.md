@@ -26,7 +26,7 @@ npm test
 
 ##Usage
 
-If not included, you must create a ```dotenv``` file in order to run the server properly.
+If not included, you must create a ```dotenv``` file in your main project folder in order to run the server properly.
 ```
 .env
 
