@@ -23,6 +23,17 @@ To run the unit test
 ```
 npm test
 ```
+##Unit Testing
+
+To initiate the Unit Tests
+```
+mocha
+```
+
+To See All Errors and Debugs of the Unit Tests
+```
+DEBUG=true mocha
+```
 
 ##Usage
 
@@ -44,19 +55,6 @@ mysql.server start
 
 You must have at least one set of User & App Data in your database to get positive results for the 'Find All Gym Locations' test when unit testing.
 ```
-
-##Unit Testing
-
-To initiate the Unit Tests
-```
-mocha
-```
-
-To See All Errors and Debugs of the Unit Tests
-```
-DEBUG=true mocha
-```
-
 
 ##Users Routes
 
@@ -112,3 +110,13 @@ DEBUG=true mocha
 | Route Hit | Response |
 | --- | --- |
 | DELETE /api/v1/apps/:id | ```Gym Pathway Activated: DELETE /apps:id```
+
+##Workflow
+
+
+
+
+
+
+
+##Deployment
