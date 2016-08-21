@@ -117,15 +117,21 @@ Steps to follow when setting up your feature branch work stations via command li
 
 1. Create a 2nd branch aside from your master branch
 
-  ```git checkout -b newBranch```
+  ```
+  git checkout -b newBranch
+  ```
 
 2. Merge new branch with your master branch
 
-  ```git merge master```
+  ```
+  git merge master
+  ```
 
 3. Push merged code up to newBranch for updated version
 
-  ```git push origin newBranch ```
+  ```
+  git push origin newBranch
+  ```
 
 4. Check newBranch repo to see if it's up to date with the master branch.  
 
@@ -139,20 +145,35 @@ Via command line:
 
 1. Check what branch you are currently on
 
-  ```git branch```
+  ```
+  git branch
+  ```
 
 2. If you're not on the correct branch, change it to the branch that you wish to deploy
 
-  ```git checkout deployreadyBranch```
+  ```
+  git checkout deployreadyBranch
+  ```
 
 3. Commit any code changes made to the soon deployed branch before deployment
 
-  git add all:  ```git gaa```
+  git add all:
+  ```
+  git gaa
+  ```
 
-  git commit message: ```git commit -m "Added readme file to complete for deployment```
+  git commit message:
+  ```
+  git commit -m "Added readme file to complete for deployment
+  ```
 
-  git push: ```git push origin deployreadyBranch```
+  git push:
+  ```
+  git push origin deployreadyBranch
+  ```
 
 4. Merge updated code from ```deployreadyBranch``` to master branch for final deployment
 
-  ```git merge master```
+  ```
+  git merge master
+  ```
