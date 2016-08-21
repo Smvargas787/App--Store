@@ -113,6 +113,22 @@ You must have at least one set of User & App Data in your database to get positi
 
 ##Workflow
 
+Steps to follow when setting up your feature branch work stations via command line:
+
+1. Create a 2nd branch aside from your master branch
+
+  ```git checkout -b newBranch```
+
+2. Merge new branch with your master branch
+
+  ```git merge master```
+
+3. Push merged code up to newBranch for updated version
+
+  ```git push origin newBranch ```
+
+4. Check newBranch repo to see if it's up to date with the master branch.  
+
 
 
 
