@@ -178,4 +178,4 @@ Via command line:
   git merge master
   ```
 
-5. Check codeship to see if your code is passing to get deployed
+5. Check codeship to see if your code is passing to get automatically deployed to heroku
