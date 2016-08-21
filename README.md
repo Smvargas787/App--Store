@@ -131,8 +131,28 @@ Steps to follow when setting up your feature branch work stations via command li
 
 
 
-
-
-
-
 ##Deployment
+
+In order to deploy your final adjustments to your work you must first check/realize if you are on the current branch that you want to deploy out.
+
+Via command line:
+
+1. Check what branch you are currently on
+
+  ```git branch```
+
+2. If you're not on the correct branch, change it to the branch that you wish to deploy
+
+  ```git checkout deployreadyBranch```
+
+3. Commit any code changes made to the soon deployed branch before deployment
+
+  git add all:  ```git gaa```
+
+  git commit message: ```git commit -m "Added readme file to complete for deployment```
+
+  git push: ```git push origin deployreadyBranch```
+
+4. Merge updated code from ```deployreadyBranch``` to master branch for final deployment
+
+  ```git merge master```
