@@ -1,3 +1,5 @@
+[ ![Codeship Status for Smvargas787/App--Store](https://codeship.com/projects/29b76e20-4976-0134-7a5b-56bd1d4e9b8b/status?branch=master)](https://codeship.com/projects/169532)
+
 #App Store
 
 ##Installation
