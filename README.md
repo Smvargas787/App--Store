@@ -157,17 +157,17 @@ Via command line:
 
 3. Commit any code changes made to the soon deployed branch before deployment
 
-  git add all:
+  **git add all:**
   ```
   git gaa
   ```
 
-  git commit message:
+  **git commit message:**
   ```
   git commit -m "Added readme file to complete for deployment
   ```
 
-  git push:
+  **git push:**
   ```
   git push origin deployreadyBranch
   ```
