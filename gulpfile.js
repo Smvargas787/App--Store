@@ -35,3 +35,12 @@ gulp.task('push', () => {
     if (err) throw err;
   });
 });
+
+// -------------------------- Git Push & Tagging ----------------------------//
+
+gulp.task('push-tag', ['push'], () => {
+  console.log('Pushing-Tagged Version: \n');
+  git.push('github', 'gulptask', { args: ' --tags' }, (err) => {
+    if (err) throw err;
+  });
+});
