@@ -28,7 +28,8 @@
     "mysql": "2.11.1",
     "sequelize": "3.23.6",
     "supertest": "2.0.0",
-    "timeto_go": "1.0.3"
+    "timeto_go": "1.0.3",
+    "yargs": "5.0.0"
   },
   "devDependencies": {
     "eslint": "3.2.2",
