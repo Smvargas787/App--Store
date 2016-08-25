@@ -4,7 +4,7 @@ const args = require('yargs');
 
 
 // -------------------------- Tasks Set Up ----------------------------//
-gulp.task('increase', () => {
+gulp.task('bump', () => {
   const packageJson = require('./package.json');
 
   console.log(packageJson.version);
@@ -22,7 +22,7 @@ gulp.task('add', () => {
 
 gulp.task('tag', ['commit'], () => {
   console.log('Commiting & Tagging Version: \n');
-  git.tag('v1.8.0', 'Version message', (err) => {
+  git.tag('v1.8.0', 'Version Message', (err) => {
     if (err) throw err;
   });
 });
@@ -43,4 +43,10 @@ gulp.task('push-tag', ['push'], () => {
   git.push('github', 'gulptask', { args: ' --tags' }, (err) => {
     if (err) throw err;
   });
+});
+
+// -------------------------- Git Pushed Finalized ----------------------------//
+
+gulp.task('default', ['add', 'commit', 'tag', 'push', 'push-tag'], () => {
+  console.log('Push Test Sucessful');
 });
