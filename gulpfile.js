@@ -16,3 +16,12 @@ gulp.task('add', () => {
   return gulp.src('./git-test/*')
     .pipe(git.add({ args: ' -A' }));
 });
+
+// -------------------------- Git Commit/Tag ----------------------------//
+
+gulp.task('tag', ['commit'], () => {
+  console.log('Commiting & Tagging Version: \n');
+  git.tag('v1.8.0', 'Version message', (err) => {
+    if (err) throw err;
+  });
+});
