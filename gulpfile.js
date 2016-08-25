@@ -4,6 +4,7 @@ const args = require('yargs');
 
 
 // -------------------------- Tasks Set Up ----------------------------//
+
 gulp.task('bump', () => {
   const packageJson = require('./package.json');
 
