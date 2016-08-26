@@ -20,7 +20,9 @@
             "no-unused-vars": 0,
             "no-global-assign": 0,
             "no-unsafe-negation": 0,
-            "no-loop-func": 0
+            "no-loop-func": 0,
+            "no-mixed-operators": 0,
+            "no-lonely-if": 0
         },
         "globals": {
             "describe": true,

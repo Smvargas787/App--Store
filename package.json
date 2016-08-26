@@ -21,12 +21,17 @@
     "express": "4.14.0",
     "faker": "3.1.0",
     "fs": "0.0.2",
+    "gulp": "3.9.1",
+    "gulp-bump": "2.4.0",
+    "gulp-git": "1.11.0",
     "mocha": "3.0.1",
     "moment": "2.14.1",
     "mysql": "2.11.1",
+    "run-sequence": "1.2.2",
     "sequelize": "3.23.6",
     "supertest": "2.0.0",
-    "timeto_go": "1.0.3"
+    "timeto_go": "1.0.4",
+    "yargs": "5.0.0"
   },
   "devDependencies": {
     "eslint": "3.2.2",
