@@ -45,14 +45,14 @@ exports.vni = (vn, vt) => {
         minor++;
       } else if (argv.patch) {
         patch++;
-//       } else {
-//         console.log('Update: None');
-//         git.checkout('bump', (err) => {
-//           if (err) throw err;
-//         });
-//         process.exit();
-//       }
-//     }
+      } else {
+        console.log('Update: None');
+        git.checkout('bump', (err) => {
+          if (err) throw err;
+        });
+        process.exit();
+      }
+    }
 //     version = `${major}.${minor}.${patch}`;
 //     packageBump.version = version;
 //
