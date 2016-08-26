@@ -43,8 +43,8 @@ exports.vni = (vn, vt) => {
         patch = 0;
       } else if (argv.minor) {
         minor++;
-//       } else if (argv.patch) {
-//         patch++;
+      } else if (argv.patch) {
+        patch++;
 //       } else {
 //         console.log('Update: None');
 //         git.checkout('bump', (err) => {
