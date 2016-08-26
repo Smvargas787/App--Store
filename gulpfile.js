@@ -30,10 +30,10 @@ exports.vni = (vn, vt) => {
         versionArray.push(i);
       }
     }
-//     patch = vt.toLowerCase(versionArray[2] + 2, vt.length);
-//     minor = vt.toLowerCase(versionArray[0] + 1, versionArray[1]);
-//     major = vt.toLowerCase(versionArray[0], versionArray[0] - vt.length);
-//
+    patch = vt.toLowerCase(versionArray[2] + 2, vt.length);
+    minor = vt.toLowerCase(versionArray[0] + 1, versionArray[1]);
+    major = vt.toLowerCase(versionArray[0], versionArray[0] - vt.length);
+
 //     if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && argv.major) {
 //       console.warn('Accepting Only Major, Minor, or Patch.');
 //     } else {
