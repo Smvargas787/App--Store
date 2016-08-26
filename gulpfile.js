@@ -30,47 +30,47 @@ exports.vni = (vn, vt) => {
         versionArray.push(i);
       }
     }
-    patch = vt.toLowerCase(versionArray[2] + 2, vt.length);
-    minor = vt.toLowerCase(versionArray[0] + 1, versionArray[1]);
-    major = vt.toLowerCase(versionArray[0], versionArray[0] - vt.length);
-
-    if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && argv.major) {
-      console.warn('Accepting Only Major, Minor, or Patch.');
-    } else {
-      if (argv.major) {
-        major++;
-        minor = 0;
-        patch = 0;
-      } else if (argv.minor) {
-        minor++;
-      } else if (argv.patch) {
-        patch++;
-      } else {
-        console.log('Update: None');
-        git.checkout('bump', (err) => {
-          if (err) throw err;
-        });
-        process.exit();
-      }
-    }
-    version = `${major}.${minor}.${patch}`;
-    packageBump.version = version;
-
-  // -------------------------- Git Tag ----------------------------//
-
-    git.tag('v' + version, argv.message, { args: '-a' }, (err) => {
-      if (err) throw err;
-    });
-    gulp.src('./*.json')
-    .pipe(bump({ version: packageBump.version }))
-    .pipe(gulp.dest('./'));
-  });
-
-// -------------------------- Git Push-Tag ----------------------------//
-
-  gulp.task('pushTag', () => {
-    git.push('github', [], { args: '--tags' }, (err) => {
-      if (err) throw err;
-    });
-  });
-};
+//     patch = vt.toLowerCase(versionArray[2] + 2, vt.length);
+//     minor = vt.toLowerCase(versionArray[0] + 1, versionArray[1]);
+//     major = vt.toLowerCase(versionArray[0], versionArray[0] - vt.length);
+//
+//     if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && argv.major) {
+//       console.warn('Accepting Only Major, Minor, or Patch.');
+//     } else {
+//       if (argv.major) {
+//         major++;
+//         minor = 0;
+//         patch = 0;
+//       } else if (argv.minor) {
+//         minor++;
+//       } else if (argv.patch) {
+//         patch++;
+//       } else {
+//         console.log('Update: None');
+//         git.checkout('bump', (err) => {
+//           if (err) throw err;
+//         });
+//         process.exit();
+//       }
+//     }
+//     version = `${major}.${minor}.${patch}`;
+//     packageBump.version = version;
+//
+//   // -------------------------- Git Tag ----------------------------//
+//
+//     git.tag('v' + version, argv.message, { args: '-a' }, (err) => {
+//       if (err) throw err;
+//     });
+//     gulp.src('./*.json')
+//     .pipe(bump({ version: packageBump.version }))
+//     .pipe(gulp.dest('./'));
+//   });
+//
+// // -------------------------- Git Push-Tag ----------------------------//
+//
+//   gulp.task('pushTag', () => {
+//     git.push('github', [], { args: '--tags' }, (err) => {
+//       if (err) throw err;
+//     });
+//   });
+// };
