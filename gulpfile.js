@@ -66,11 +66,11 @@ exports.vni = (vn, vt) => {
     .pipe(gulp.dest('./'));
   });
 
-// // -------------------------- Git Push-Tag ----------------------------//
-//
-//   gulp.task('pushTag', () => {
-//     git.push('github', [], { args: '--tags' }, (err) => {
-//       if (err) throw err;
-//     });
-//   });
-// };
+// -------------------------- Git Push-Tag ----------------------------//
+
+  gulp.task('pushTag', () => {
+    git.push('github', [], { args: '--tags' }, (err) => {
+      if (err) throw err;
+    });
+  });
+};
