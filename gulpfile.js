@@ -56,16 +56,16 @@ exports.vni = (vn, vt) => {
     version = `${major}.${minor}.${patch}`;
     packageBump.version = version;
 
-//   // -------------------------- Git Tag ----------------------------//
-//
-//     git.tag('v' + version, argv.message, { args: '-a' }, (err) => {
-//       if (err) throw err;
-//     });
-//     gulp.src('./*.json')
-//     .pipe(bump({ version: packageBump.version }))
-//     .pipe(gulp.dest('./'));
-//   });
-//
+  // -------------------------- Git Tag ----------------------------//
+
+    git.tag('v' + version, argv.message, { args: '-a' }, (err) => {
+      if (err) throw err;
+    });
+    gulp.src('./*.json')
+    .pipe(bump({ version: packageBump.version }))
+    .pipe(gulp.dest('./'));
+  });
+
 // // -------------------------- Git Push-Tag ----------------------------//
 //
 //   gulp.task('pushTag', () => {
