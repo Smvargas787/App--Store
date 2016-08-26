@@ -34,13 +34,13 @@ exports.vni = (vn, vt) => {
     minor = vt.toLowerCase(versionArray[0] + 1, versionArray[1]);
     major = vt.toLowerCase(versionArray[0], versionArray[0] - vt.length);
 
-//     if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && argv.major) {
-//       console.warn('Accepting Only Major, Minor, or Patch.');
-//     } else {
-//       if (argv.major) {
-//         major++;
-//         minor = 0;
-//         patch = 0;
+    if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && argv.major) {
+      console.warn('Accepting Only Major, Minor, or Patch.');
+    } else {
+      if (argv.major) {
+        major++;
+        minor = 0;
+        patch = 0;
 //       } else if (argv.minor) {
 //         minor++;
 //       } else if (argv.patch) {
