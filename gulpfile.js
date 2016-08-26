@@ -41,8 +41,8 @@ exports.vni = (vn, vt) => {
         major++;
         minor = 0;
         patch = 0;
-//       } else if (argv.minor) {
-//         minor++;
+      } else if (argv.minor) {
+        minor++;
 //       } else if (argv.patch) {
 //         patch++;
 //       } else {
