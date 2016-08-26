@@ -53,9 +53,9 @@ exports.vni = (vn, vt) => {
         process.exit();
       }
     }
-//     version = `${major}.${minor}.${patch}`;
-//     packageBump.version = version;
-//
+    version = `${major}.${minor}.${patch}`;
+    packageBump.version = version;
+
 //   // -------------------------- Git Tag ----------------------------//
 //
 //     git.tag('v' + version, argv.message, { args: '-a' }, (err) => {
