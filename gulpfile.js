@@ -30,6 +30,9 @@ exports.vni = (vn, vt) => {
         versionArray.push(i);
       }
     }
+
+    // -------------------------- Declaring Major, Minor, Patch Version Numbers ----------------------------//
+
     patch = vt.toLowerCase(versionArray[2] + 2, vt.length);
     minor = vt.toLowerCase(versionArray[0] + 1, versionArray[1]);
     major = vt.toLowerCase(versionArray[0], versionArray[0] - vt.length);
