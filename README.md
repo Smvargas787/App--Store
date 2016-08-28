@@ -31,6 +31,12 @@ DB_SCHEMA=mysql
 DB_PORT=3833
 ```
 
+To run database Server
+```
+mysql.server start
+
+You must have at least one set of User & App Data in your database to get positive results for the 'Find All Gym Locations" Route
+```
 ##Run Unit tests
 
 To run the unit test
