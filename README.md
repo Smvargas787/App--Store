@@ -17,6 +17,20 @@ To run the server with default settings run
 ```
 npm start
 ```
+
+If not included, you must create a ```dotenv``` file in your main project folder in order to run the server properly.
+```
+.env
+
+Example:
+DB_NAME=crudnizer
+DB_USER=bob
+DB_PASS=
+DB_HOST=127.1.2
+DB_SCHEMA=mysql
+DB_PORT=3833
+```
+
 ##Run Unit tests
 
 To run the unit test
