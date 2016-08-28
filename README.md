@@ -44,7 +44,7 @@ If not included, you must create a ```dotenv``` file in your main project folder
 .env
 
 Example:
-NAME=crudnizer
+DB_NAME=crudnizer
 DB_USER=bob
 DB_PASS=
 DB_HOST=127.1.2
