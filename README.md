@@ -46,7 +46,7 @@ You must create a dotenv file in order to run the server properly.
 .env
 
 Example:
-NAME=title
+DB_NAME=crudnizer
 DB_USER=bob
 DB_PASS=
 DB_HOST=127.1.2
