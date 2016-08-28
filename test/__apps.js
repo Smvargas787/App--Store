@@ -1,20 +1,20 @@
 const expect = require('chai').expect;
 const request = require('supertest');
 
-describe('App Routes', () => {
+describe('Pokedex Routes', () => {
   let server;
   let app;
 
   beforeEach(() => {
-    server = require('../src/server.js');
+    server = require('../src/server');
   });
 
   afterEach(() => {
     server.close();
   });
 
-  // Test for Multiple Apps
-  it('GET /api/v1/apps returns multiple apps', (done) => {
+  // Test for Multiple Pokedex Locations
+  it('GET /api/v1/apps returns multiple pokedex locations', (done) => {
     request(server)
       .get('/api/v1/apps')
       .set('Accept', 'application/json')
@@ -30,7 +30,7 @@ describe('App Routes', () => {
       .end(done);
   });
 
-  // Test for a single app
+  // Test for a single Pokedex Location
   it('GET /api/v1/apps/:id returns an app obj with id, title, description, and releaseDate properties', (done) => {
     request(server)
     .get(`/api/v1/apps/${this.app.id}`)
